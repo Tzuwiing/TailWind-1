@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "HTML",
+			"path": "../../../Pictures/Documents/HTML"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Tailwind-with-cdn"
+	}
+}
