@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dark>
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="../output.css">
 </head>
 
-<body>
+<body class="dark:bg-slate-700 dark:text-white ">
+
+    <button id="dark-mode" class="h-5 w-10 rounded-full bg-slate-500 p-0.5 mx-auto">
+        <div class="h-4 w-4 rounded-full bg-white dark:translate-x-5"></div>
+    </button>
+
 
     <div
         class="w-[400px] h-full mx-auto mt-20 text-center rounded-lg md:w-[450px] md:h-[550px] dark:border-slate-700 dark:shadow-slate-800">
@@ -38,5 +43,21 @@
         <div class="h-8 w-20 rounded-md bg-blue-500 mx-auto pt-1 hover:bg-blue-400">Login</div>
     </div>
 </body>
+
+<script>
+    function toDT() {
+        if (localStorage.getItem("theme") === "dark") {
+            localStorage.setItem("theme", "light");
+            document.documentElement.classList.remove("dark");
+        } else {
+            localStorage.setItem("theme", "dark");
+            document.documentElement.classList.add("dark");
+        }
+    }
+    document.querySelector("#dark-mode").addEventListener("click", toDT);
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+</script>
 
 </html>

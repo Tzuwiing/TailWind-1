@@ -1,22 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./public/**/*.{html,js}"],
   theme: {
     container: {
       center: true,
     },
     extend: {
-      animation:{
+      animation: {
         "spin-slow": "spin 3s linear infinite",
-        "abudzar": "bergerak 1s ease-in-out infinite",
+        abudzar: "bergerak 1s ease-in-out infinite",
       },
       keyframes: {
         bergerak: {
-          '0%-100%' : { transform: "rotate(3deg)"},
-          "50%" : {transform : "rotate(-3deg)" },
-        }
+          "0%-100%": { transform: "rotate(3deg)" },
+          "50%": { transform: "rotate(-3deg)" },
+        },
       },
-      colors:{
+      colors: {
         mouse: "#b4aafg",
         keyboard: {
           100: "#4F6F52 ",
@@ -24,19 +25,18 @@ module.exports = {
           300: "#43766C ",
           400: "#76453B ",
           500: "#DCF2F1 ",
-        }
+        },
       },
       spacing: {
-        '13': '3.25rem'
+        13: "3.25rem",
       },
-      fontFamily:{
-        inter:["inter"]
+      fontFamily: {
+        inter: ["inter"],
       },
-      fontSize:{
-        pondok:["7rem"]
-      }
+      fontSize: {
+        pondok: ["7rem"],
+      },
     },
   },
   plugins: [],
 };
-
